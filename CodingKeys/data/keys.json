@@ -1,0 +1,24 @@
+[
+  {
+    "command": "Move Line Up",
+    "key": "⌃ ⌥ ↑",
+    "mapping": 
+    {
+      "Xcode": "⌃ ⌥ ↑",
+      "Sublime Text": "⌃ ⌘ ↑",
+      "Eclipse": "⌥ ↑",
+      "Android Studio": ""
+    }
+  },
+  {
+    "command": "Move Line Down",
+    "key": "⌃ ⌥ ↓",
+    "mapping": 
+    {
+      "Xcode": "⌃ ⌥ ↓",
+      "Sublime Text": "⌃ ⌘ ↓",
+      "Eclipse": "⌥ ↓",
+      "Android Studio": ""
+    }
+  }
+]

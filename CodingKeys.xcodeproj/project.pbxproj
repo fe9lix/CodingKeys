@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DCC6EB68182D9E3700E2EAE6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC6EB67182D9E3700E2EAE6 /* Cocoa.framework */; };
+		DCC6EB72182D9E3700E2EAE6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCC6EB70182D9E3700E2EAE6 /* InfoPlist.strings */; };
+		DCC6EB74182D9E3700E2EAE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC6EB73182D9E3700E2EAE6 /* main.m */; };
+		DCC6EB78182D9E3700E2EAE6 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DCC6EB76182D9E3700E2EAE6 /* Credits.rtf */; };
+		DCC6EB7B182D9E3700E2EAE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC6EB7A182D9E3700E2EAE6 /* AppDelegate.m */; };
+		DCC6EB7E182D9E3700E2EAE6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC6EB7C182D9E3700E2EAE6 /* MainMenu.xib */; };
+		DCC6EB80182D9E3700E2EAE6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC6EB7F182D9E3700E2EAE6 /* Images.xcassets */; };
+		DCC6EB87182D9E3700E2EAE6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC6EB86182D9E3700E2EAE6 /* XCTest.framework */; };
+		DCC6EB88182D9E3700E2EAE6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC6EB67182D9E3700E2EAE6 /* Cocoa.framework */; };
+		DCC6EB90182D9E3700E2EAE6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCC6EB8E182D9E3700E2EAE6 /* InfoPlist.strings */; };
+		DCC6EB92182D9E3700E2EAE6 /* CodingKeysTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC6EB91182D9E3700E2EAE6 /* CodingKeysTests.m */; };
+		DCC6EB9C182E80B200E2EAE6 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC6EB9B182E80B200E2EAE6 /* Carbon.framework */; };
+		DCC6EB9F182E8E5D00E2EAE6 /* HotKeyService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC6EB9E182E8E5D00E2EAE6 /* HotKeyService.m */; };
+		DCC6EBA8182E955A00E2EAE6 /* keys.json in Resources */ = {isa = PBXBuildFile; fileRef = DCC6EBA7182E955A00E2EAE6 /* keys.json */; };
+		DCC6EBAB182E968800E2EAE6 /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC6EBAA182E968800E2EAE6 /* AppService.m */; };
+		DCC6EBAE182FEE5E00E2EAE6 /* HotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC6EBAD182FEE5E00E2EAE6 /* HotKey.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DCC6EB89182D9E3700E2EAE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCC6EB5C182D9E3700E2EAE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCC6EB63182D9E3700E2EAE6;
+			remoteInfo = CodingKeys;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DCC6EB64182D9E3700E2EAE6 /* CodingKeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodingKeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCC6EB67182D9E3700E2EAE6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DCC6EB6A182D9E3700E2EAE6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DCC6EB6B182D9E3700E2EAE6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DCC6EB6C182D9E3700E2EAE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DCC6EB6F182D9E3700E2EAE6 /* CodingKeys-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CodingKeys-Info.plist"; sourceTree = "<group>"; };
+		DCC6EB71182D9E3700E2EAE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DCC6EB73182D9E3700E2EAE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DCC6EB75182D9E3700E2EAE6 /* CodingKeys-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CodingKeys-Prefix.pch"; sourceTree = "<group>"; };
+		DCC6EB77182D9E3700E2EAE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		DCC6EB79182D9E3700E2EAE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DCC6EB7A182D9E3700E2EAE6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DCC6EB7D182D9E3700E2EAE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DCC6EB7F182D9E3700E2EAE6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DCC6EB85182D9E3700E2EAE6 /* CodingKeysTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodingKeysTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCC6EB86182D9E3700E2EAE6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DCC6EB8D182D9E3700E2EAE6 /* CodingKeysTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CodingKeysTests-Info.plist"; sourceTree = "<group>"; };
+		DCC6EB8F182D9E3700E2EAE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DCC6EB91182D9E3700E2EAE6 /* CodingKeysTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodingKeysTests.m; sourceTree = "<group>"; };
+		DCC6EB9B182E80B200E2EAE6 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		DCC6EB9D182E8E5D00E2EAE6 /* HotKeyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotKeyService.h; sourceTree = "<group>"; };
+		DCC6EB9E182E8E5D00E2EAE6 /* HotKeyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotKeyService.m; sourceTree = "<group>"; };
+		DCC6EBA7182E955A00E2EAE6 /* keys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = keys.json; sourceTree = "<group>"; };
+		DCC6EBA9182E968800E2EAE6 /* AppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppService.h; sourceTree = "<group>"; };
+		DCC6EBAA182E968800E2EAE6 /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
+		DCC6EBAC182FEE5E00E2EAE6 /* HotKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotKey.h; sourceTree = "<group>"; };
+		DCC6EBAD182FEE5E00E2EAE6 /* HotKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotKey.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCC6EB61182D9E3700E2EAE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC6EB9C182E80B200E2EAE6 /* Carbon.framework in Frameworks */,
+				DCC6EB68182D9E3700E2EAE6 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCC6EB82182D9E3700E2EAE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC6EB88182D9E3700E2EAE6 /* Cocoa.framework in Frameworks */,
+				DCC6EB87182D9E3700E2EAE6 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DCC6EB5B182D9E3700E2EAE6 = {
+			isa = PBXGroup;
+			children = (
+				DCC6EB6D182D9E3700E2EAE6 /* CodingKeys */,
+				DCC6EB8B182D9E3700E2EAE6 /* CodingKeysTests */,
+				DCC6EB66182D9E3700E2EAE6 /* Frameworks */,
+				DCC6EB65182D9E3700E2EAE6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DCC6EB65182D9E3700E2EAE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCC6EB64182D9E3700E2EAE6 /* CodingKeys.app */,
+				DCC6EB85182D9E3700E2EAE6 /* CodingKeysTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCC6EB66182D9E3700E2EAE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCC6EB9B182E80B200E2EAE6 /* Carbon.framework */,
+				DCC6EB67182D9E3700E2EAE6 /* Cocoa.framework */,
+				DCC6EB86182D9E3700E2EAE6 /* XCTest.framework */,
+				DCC6EB69182D9E3700E2EAE6 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCC6EB69182D9E3700E2EAE6 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCC6EB6A182D9E3700E2EAE6 /* AppKit.framework */,
+				DCC6EB6B182D9E3700E2EAE6 /* CoreData.framework */,
+				DCC6EB6C182D9E3700E2EAE6 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		DCC6EB6D182D9E3700E2EAE6 /* CodingKeys */ = {
+			isa = PBXGroup;
+			children = (
+				DCC6EB79182D9E3700E2EAE6 /* AppDelegate.h */,
+				DCC6EB7A182D9E3700E2EAE6 /* AppDelegate.m */,
+				DCC6EBA9182E968800E2EAE6 /* AppService.h */,
+				DCC6EBAA182E968800E2EAE6 /* AppService.m */,
+				DCC6EB9D182E8E5D00E2EAE6 /* HotKeyService.h */,
+				DCC6EB9E182E8E5D00E2EAE6 /* HotKeyService.m */,
+				DCC6EBAC182FEE5E00E2EAE6 /* HotKey.h */,
+				DCC6EBAD182FEE5E00E2EAE6 /* HotKey.m */,
+				DCC6EB7C182D9E3700E2EAE6 /* MainMenu.xib */,
+				DCC6EB7F182D9E3700E2EAE6 /* Images.xcassets */,
+				DCC6EBA6182E955A00E2EAE6 /* data */,
+				DCC6EB6E182D9E3700E2EAE6 /* Supporting Files */,
+			);
+			path = CodingKeys;
+			sourceTree = "<group>";
+		};
+		DCC6EB6E182D9E3700E2EAE6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCC6EB6F182D9E3700E2EAE6 /* CodingKeys-Info.plist */,
+				DCC6EB70182D9E3700E2EAE6 /* InfoPlist.strings */,
+				DCC6EB73182D9E3700E2EAE6 /* main.m */,
+				DCC6EB75182D9E3700E2EAE6 /* CodingKeys-Prefix.pch */,
+				DCC6EB76182D9E3700E2EAE6 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCC6EB8B182D9E3700E2EAE6 /* CodingKeysTests */ = {
+			isa = PBXGroup;
+			children = (
+				DCC6EB91182D9E3700E2EAE6 /* CodingKeysTests.m */,
+				DCC6EB8C182D9E3700E2EAE6 /* Supporting Files */,
+			);
+			path = CodingKeysTests;
+			sourceTree = "<group>";
+		};
+		DCC6EB8C182D9E3700E2EAE6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCC6EB8D182D9E3700E2EAE6 /* CodingKeysTests-Info.plist */,
+				DCC6EB8E182D9E3700E2EAE6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCC6EBA6182E955A00E2EAE6 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				DCC6EBA7182E955A00E2EAE6 /* keys.json */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCC6EB63182D9E3700E2EAE6 /* CodingKeys */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCC6EB95182D9E3700E2EAE6 /* Build configuration list for PBXNativeTarget "CodingKeys" */;
+			buildPhases = (
+				DCC6EB60182D9E3700E2EAE6 /* Sources */,
+				DCC6EB61182D9E3700E2EAE6 /* Frameworks */,
+				DCC6EB62182D9E3700E2EAE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CodingKeys;
+			productName = CodingKeys;
+			productReference = DCC6EB64182D9E3700E2EAE6 /* CodingKeys.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCC6EB84182D9E3700E2EAE6 /* CodingKeysTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCC6EB98182D9E3700E2EAE6 /* Build configuration list for PBXNativeTarget "CodingKeysTests" */;
+			buildPhases = (
+				DCC6EB81182D9E3700E2EAE6 /* Sources */,
+				DCC6EB82182D9E3700E2EAE6 /* Frameworks */,
+				DCC6EB83182D9E3700E2EAE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCC6EB8A182D9E3700E2EAE6 /* PBXTargetDependency */,
+			);
+			name = CodingKeysTests;
+			productName = CodingKeysTests;
+			productReference = DCC6EB85182D9E3700E2EAE6 /* CodingKeysTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCC6EB5C182D9E3700E2EAE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					DCC6EB84182D9E3700E2EAE6 = {
+						TestTargetID = DCC6EB63182D9E3700E2EAE6;
+					};
+				};
+			};
+			buildConfigurationList = DCC6EB5F182D9E3700E2EAE6 /* Build configuration list for PBXProject "CodingKeys" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCC6EB5B182D9E3700E2EAE6;
+			productRefGroup = DCC6EB65182D9E3700E2EAE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCC6EB63182D9E3700E2EAE6 /* CodingKeys */,
+				DCC6EB84182D9E3700E2EAE6 /* CodingKeysTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCC6EB62182D9E3700E2EAE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC6EB72182D9E3700E2EAE6 /* InfoPlist.strings in Resources */,
+				DCC6EBA8182E955A00E2EAE6 /* keys.json in Resources */,
+				DCC6EB80182D9E3700E2EAE6 /* Images.xcassets in Resources */,
+				DCC6EB78182D9E3700E2EAE6 /* Credits.rtf in Resources */,
+				DCC6EB7E182D9E3700E2EAE6 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCC6EB83182D9E3700E2EAE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC6EB90182D9E3700E2EAE6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCC6EB60182D9E3700E2EAE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC6EBAE182FEE5E00E2EAE6 /* HotKey.m in Sources */,
+				DCC6EB9F182E8E5D00E2EAE6 /* HotKeyService.m in Sources */,
+				DCC6EBAB182E968800E2EAE6 /* AppService.m in Sources */,
+				DCC6EB7B182D9E3700E2EAE6 /* AppDelegate.m in Sources */,
+				DCC6EB74182D9E3700E2EAE6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCC6EB81182D9E3700E2EAE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC6EB92182D9E3700E2EAE6 /* CodingKeysTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCC6EB8A182D9E3700E2EAE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCC6EB63182D9E3700E2EAE6 /* CodingKeys */;
+			targetProxy = DCC6EB89182D9E3700E2EAE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DCC6EB70182D9E3700E2EAE6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCC6EB71182D9E3700E2EAE6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DCC6EB76182D9E3700E2EAE6 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCC6EB77182D9E3700E2EAE6 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		DCC6EB7C182D9E3700E2EAE6 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCC6EB7D182D9E3700E2EAE6 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		DCC6EB8E182D9E3700E2EAE6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCC6EB8F182D9E3700E2EAE6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCC6EB93182D9E3700E2EAE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DCC6EB94182D9E3700E2EAE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DCC6EB96182D9E3700E2EAE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CodingKeys/CodingKeys-Prefix.pch";
+				INFOPLIST_FILE = "CodingKeys/CodingKeys-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DCC6EB97182D9E3700E2EAE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CodingKeys/CodingKeys-Prefix.pch";
+				INFOPLIST_FILE = "CodingKeys/CodingKeys-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DCC6EB99182D9E3700E2EAE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CodingKeys.app/Contents/MacOS/CodingKeys";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CodingKeys/CodingKeys-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CodingKeysTests/CodingKeysTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DCC6EB9A182D9E3700E2EAE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CodingKeys.app/Contents/MacOS/CodingKeys";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CodingKeys/CodingKeys-Prefix.pch";
+				INFOPLIST_FILE = "CodingKeysTests/CodingKeysTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCC6EB5F182D9E3700E2EAE6 /* Build configuration list for PBXProject "CodingKeys" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCC6EB93182D9E3700E2EAE6 /* Debug */,
+				DCC6EB94182D9E3700E2EAE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCC6EB95182D9E3700E2EAE6 /* Build configuration list for PBXNativeTarget "CodingKeys" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCC6EB96182D9E3700E2EAE6 /* Debug */,
+				DCC6EB97182D9E3700E2EAE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DCC6EB98182D9E3700E2EAE6 /* Build configuration list for PBXNativeTarget "CodingKeysTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCC6EB99182D9E3700E2EAE6 /* Debug */,
+				DCC6EB9A182D9E3700E2EAE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DCC6EB5C182D9E3700E2EAE6 /* Project object */;
+}
