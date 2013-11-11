@@ -85,12 +85,12 @@
 - (void)didTriggerHotKey:(NSNotification *)notification {
     HotKey *hotKey = notification.userInfo[@"hotKey"];
     
-    HotKey *mappedHotKey = [hotKey mappedHotKeyForAppWithName:[self activeApplicationName]];
-    if (!mappedHotKey || ([hotKey isEqual:mappedHotKey])) {
+    NSArray *mappedHotKeys = [hotKey mappedHotKeysForAppWithName:[self activeApplicationName]];
+    if ([mappedHotKeys count] == 0) {
         return;
     }
     
-    [[HotKeyService sharedService] dispatchKeyEventForHotKey:mappedHotKey];
+    [[HotKeyService sharedService] dispatchKeyEventForHotKeys:mappedHotKeys];
 }
 
 - (void)didChangeHotKeys:(NSNotification *)notification {

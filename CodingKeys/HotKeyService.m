@@ -127,17 +127,21 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler,
     [self.hotKeys removeObjectForKey:@(hotKey.keyID)];
 }
 
-- (void)dispatchKeyEventForHotKey:(HotKey *)hotKey {
+- (void)dispatchKeyEventForHotKeys:(NSArray *)hotKeys {
     ProcessSerialNumber processSerialNumber;
     GetFrontProcess(&processSerialNumber);
     
-    CGEventSourceRef source = CGEventSourceCreate (kCGEventSourceStateHIDSystemState);
-    CGEventRef ev;
+    CGEventSourceRef source = CGEventSourceCreate(kCGEventSourceStateHIDSystemState);
     
-    ev = CGEventCreateKeyboardEvent(source, (CGKeyCode)hotKey.keyCode, true);
-    CGEventSetFlags(ev, hotKey.modifiers);
-    CGEventPostToPSN (&processSerialNumber, ev);
-    CFRelease(ev);
+    for (int i = 0; i < [hotKeys count]; i++) {
+        HotKey *hotKey = hotKeys[i];
+        
+        CGEventRef ev;
+        ev = CGEventCreateKeyboardEvent(source, (CGKeyCode)hotKey.keyCode, true);
+        CGEventSetFlags(ev, hotKey.modifiers);
+        CGEventPostToPSN(&processSerialNumber, ev);
+        CFRelease(ev);
+    }
     
     CFRelease(source);
 }

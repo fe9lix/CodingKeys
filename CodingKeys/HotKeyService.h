@@ -10,6 +10,6 @@ extern NSString * const HotKeyHandlerDidTriggerHotKey;
 
 - (HotKey *)registerHotKey:(HotKey *)hotKey;
 - (void)unregisterAllHotKeys;
-- (void)dispatchKeyEventForHotKey:(HotKey *)hotKey;
+- (void)dispatchKeyEventForHotKeys:(NSArray *)hotKeys;
 
 @end

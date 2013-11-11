@@ -1,35 +1,46 @@
 [
   {
     "command": "Move Line Up",
-    "key": "⌃ ⌥ J",
+    "key": "⌃ ⌥ ↑",
     "mapping": 
     {
       "Xcode": "⌃ ⌥ ↑",
       "Sublime Text": "⌃ ⌘ ↑",
       "Eclipse": "⌥ ↑",
-      "Android Studio": ""
+      "Android Studio": "⇧ ⌥ ↑"
     }
   },
   {
     "command": "Move Line Down",
-    "key": "⌃ ⌥ ↓",
+    "key": "⌃ ⌥ ↓", 
     "mapping": 
     {
       "Xcode": "⌃ ⌥ ↓",
       "Sublime Text": "⌃ ⌘ ↓",
       "Eclipse": "⌥ ↓",
-      "Android Studio": ""
+      "Android Studio": "⇧ ⌥ ↓"
     }
   },
   {
     "command": "Duplicate Line",
-    "key": "⌃ ⌥ D",
+    "key": "⌘ D",
     "mapping": 
     {
-      "Xcode": "⌃ ⌥ ↓",
+      "Xcode": "⌃ A|⇧ ↓|⌘ C|⌘ V|⌘ V",
       "Sublime Text": "⇧ ⌘ D",
-      "Eclipse": "⌥ ↓",
-      "Android Studio": ""
+      "Eclipse": "⌥ ⌘ ↓",
+      "Android Studio": "⌘ D"
+    }
+  },
+  {
+    "command": "Delete Line",
+    "key": "⌘ ⌫",
+    "mapping": 
+    {
+      "Xcode": "⌃ A|⌃ K|⌃ K",
+      "Sublime Text": "⌃ ⇧ K",
+      "Eclipse": "⌘ D",
+      "Android Studio": "⌘ ⌫"
     }
   }
 ]

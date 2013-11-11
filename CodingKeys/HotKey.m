@@ -70,9 +70,18 @@
     self.carbonModifiers = carbonModifiers;
 }
 
-- (HotKey *)mappedHotKeyForAppWithName:(NSString *)appName {
-    NSString *mappedKey = self.mapping[appName];
-    return [[HotKey alloc] initWithKey:mappedKey mapping:nil];
+- (NSArray *)mappedHotKeysForAppWithName:(NSString *)appName {
+    NSString *mapping = self.mapping[appName];
+    NSArray *mappingComponents = [mapping componentsSeparatedByString:@"|"];
+    NSMutableArray *mappedKeys = [NSMutableArray array];
+    
+    for (NSString *mappingComponent in mappingComponents) {
+        HotKey *hotKey = [[HotKey alloc] initWithKey:mappingComponent
+                                             mapping:nil];
+        [mappedKeys addObject:hotKey];
+    }
+    
+    return mappedKeys;
 }
 
 - (NSString *)description {

@@ -12,6 +12,6 @@
 
 - (id)initWithKey:(NSString *)key mapping:(NSDictionary *)mapping;
 
-- (HotKey *)mappedHotKeyForAppWithName:(NSString *)appName;
+- (NSArray *)mappedHotKeysForAppWithName:(NSString *)appName;
 
 @end
