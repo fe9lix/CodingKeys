@@ -3,10 +3,25 @@
 #import "HotKeyService.h"
 #import "HotKey.h"
 
+@interface AppDelegate ()
+
+@property (weak) IBOutlet NSMenu *statusMenu;
+@property (strong) NSStatusItem *statusItem;
+
+@end
+
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [self setup];
+}
+
+- (void)awakeFromNib {
+    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    self.statusItem.menu = self.statusMenu;
+    self.statusItem.title = @"CodingKeys";
+    //self.statusItem.image = [NSImage imageNamed:@"imageName"];
+    self.statusItem.highlightMode = YES;
 }
 
 - (void)setup {
@@ -67,6 +82,18 @@
     }
     
     [[HotKeyService sharedService] dispatchKeyEventForHotKey:mappedHotKey];
+}
+
+- (IBAction)settingsClicked:(id)sender {
+    [[AppService sharedService] openKeyMappings];
+}
+
+- (IBAction)aboutClicked:(id)sender {
+    [[AppService sharedService] openAboutURL];
+}
+
+- (IBAction)quitClicked:(id)sender {
+    [NSApp terminate:self];
 }
 
 @end

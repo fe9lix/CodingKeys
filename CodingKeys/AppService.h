@@ -6,5 +6,7 @@
 
 - (BOOL)isAppRegistered:(NSString *)appName;
 - (NSArray *)hotKeysForAppWithName:(NSString *)appName;
+- (void)openKeyMappings;
+- (void)openAboutURL;
 
 @end

@@ -2,6 +2,7 @@
 #import "HotKey.h"
 
 static NSString * const KeysFileName = @"keys";
+static NSString * const AboutURL = @"https://github.com/fe9lix/CodingKeys";
 
 @interface AppService ()
 
@@ -55,10 +56,8 @@ static NSString * const KeysFileName = @"keys";
 }
 
 - (NSArray *)loadKeyMappingsFile {
-    NSString *path = [[NSBundle mainBundle] pathForResource:KeysFileName
-                                                     ofType:@"json"];
     NSError *error;
-    NSString *jsonString = [NSString stringWithContentsOfFile:path
+    NSString *jsonString = [NSString stringWithContentsOfFile:[self keysFilePath]
                                                      encoding:NSUTF8StringEncoding
                                                         error:&error];
     NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
@@ -68,12 +67,25 @@ static NSString * const KeysFileName = @"keys";
                                              error:nil];
 }
 
+- (NSString *)keysFilePath {
+    return [[NSBundle mainBundle] pathForResource:KeysFileName
+                                                     ofType:@"json"];
+}
+
 - (BOOL)isAppRegistered:(NSString *)appName {
     return self.hotKeysForAppName[appName] != nil;
 }
 
 - (NSArray *)hotKeysForAppWithName:(NSString *)appName {
     return self.hotKeysForAppName[appName];
+}
+
+- (void)openKeyMappings {
+    [[NSWorkspace sharedWorkspace] openFile:[self keysFilePath]];
+}
+
+- (void)openAboutURL {
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:AboutURL]];
 }
 
 @end
