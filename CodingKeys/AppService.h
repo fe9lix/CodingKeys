@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
+NSString * const AppServiceDidChangeHotKeys;
+
 @interface AppService : NSObject
 
 + (AppService *)sharedService;

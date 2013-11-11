@@ -497,6 +497,7 @@
 				DCC6EB97182D9E3700E2EAE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DCC6EB98182D9E3700E2EAE6 /* Build configuration list for PBXNativeTarget "CodingKeysTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +506,7 @@
 				DCC6EB9A182D9E3700E2EAE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

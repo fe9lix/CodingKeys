@@ -16,16 +16,20 @@
     [self setup];
 }
 
+- (void)setup {
+    [self setupNotifications];
+    [self registerHotKeys];
+}
+
 - (void)awakeFromNib {
+    [self setupStatusBarItem];
+}
+
+- (void)setupStatusBarItem {
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     self.statusItem.menu = self.statusMenu;
     self.statusItem.image = [NSImage imageNamed:@"status_bar_icon"];
     self.statusItem.highlightMode = YES;
-}
-
-- (void)setup {
-    [self setupNotifications];
-    [self setupHotKeyService];
 }
 
 - (void)setupNotifications {
@@ -38,13 +42,18 @@
                                              selector:@selector(didTriggerHotKey:)
                                                  name:HotKeyHandlerDidTriggerHotKey
                                                object:nil];
-}
-
-- (void)setupHotKeyService {
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didChangeHotKeys:)
+                                                 name:AppServiceDidChangeHotKeys
+                                               object:nil];
 }
 
 - (void)didActivateApplication:(NSNotification *)notification {
+    [self registerHotKeys];
+}
+
+- (void)registerHotKeys {
     [self unregisterHotKeys];
     
     NSString *activeAppName = [self activeApplicationName];
@@ -81,6 +90,10 @@
     }
     
     [[HotKeyService sharedService] dispatchKeyEventForHotKey:mappedHotKey];
+}
+
+- (void)didChangeHotKeys:(NSNotification *)notification {
+    [self registerHotKeys];
 }
 
 - (IBAction)settingsClicked:(id)sender {
