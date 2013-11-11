@@ -85,7 +85,6 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler,
                               EventRef theEvent,
                               void *userData) {
     @autoreleasepool {
-        
         EventHotKeyID hotKeyID;
         GetEventParameter(theEvent,
                           kEventParamDirectObject,
@@ -99,7 +98,6 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler,
         
         HotKey *hotKey = [this findHotKeyByID:keyID];
         [this dispatchNotificationForHotKey:hotKey];
-        
     }
     
     return noErr;
@@ -114,9 +112,11 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler,
 }
 
 - (void)unregisterAllHotKeys {
-    NSDictionary *hotKeys = [self.hotKeys copy];
-    for (id keyID in hotKeys) {
-        [self unregisterHotKey:hotKeys[keyID]];
+    @autoreleasepool {
+        NSDictionary *hotKeys = [self.hotKeys copy];
+        for (id keyID in hotKeys) {
+            [self unregisterHotKey:hotKeys[keyID]];
+        }
     }
 }
 

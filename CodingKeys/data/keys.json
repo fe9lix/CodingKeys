@@ -1,7 +1,7 @@
 [
   {
     "command": "Move Line Up",
-    "key": "⌃ ⌥ ↑",
+    "key": "⌃ ⌥ J",
     "mapping": 
     {
       "Xcode": "⌃ ⌥ ↑",
@@ -17,6 +17,17 @@
     {
       "Xcode": "⌃ ⌥ ↓",
       "Sublime Text": "⌃ ⌘ ↓",
+      "Eclipse": "⌥ ↓",
+      "Android Studio": ""
+    }
+  },
+  {
+    "command": "Duplicate Line",
+    "key": "⌃ ⌥ D",
+    "mapping": 
+    {
+      "Xcode": "⌃ ⌥ ↓",
+      "Sublime Text": "⇧ ⌘ D",
       "Eclipse": "⌥ ↓",
       "Android Studio": ""
     }

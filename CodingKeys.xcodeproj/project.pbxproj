@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC2DB8971831897800959260 /* KeyCodeConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2DB8961831897800959260 /* KeyCodeConverter.m */; };
 		DCC6EB68182D9E3700E2EAE6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC6EB67182D9E3700E2EAE6 /* Cocoa.framework */; };
 		DCC6EB72182D9E3700E2EAE6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCC6EB70182D9E3700E2EAE6 /* InfoPlist.strings */; };
 		DCC6EB74182D9E3700E2EAE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC6EB73182D9E3700E2EAE6 /* main.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC2DB8951831897800959260 /* KeyCodeConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyCodeConverter.h; sourceTree = "<group>"; };
+		DC2DB8961831897800959260 /* KeyCodeConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyCodeConverter.m; sourceTree = "<group>"; };
 		DCC6EB64182D9E3700E2EAE6 /* CodingKeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodingKeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC6EB67182D9E3700E2EAE6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DCC6EB6A182D9E3700E2EAE6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -138,6 +141,8 @@
 				DCC6EB9E182E8E5D00E2EAE6 /* HotKeyService.m */,
 				DCC6EBAC182FEE5E00E2EAE6 /* HotKey.h */,
 				DCC6EBAD182FEE5E00E2EAE6 /* HotKey.m */,
+				DC2DB8951831897800959260 /* KeyCodeConverter.h */,
+				DC2DB8961831897800959260 /* KeyCodeConverter.m */,
 				DCC6EB7C182D9E3700E2EAE6 /* MainMenu.xib */,
 				DCC6EB7F182D9E3700E2EAE6 /* Images.xcassets */,
 				DCC6EBA6182E955A00E2EAE6 /* data */,
@@ -287,6 +292,7 @@
 				DCC6EBAB182E968800E2EAE6 /* AppService.m in Sources */,
 				DCC6EB7B182D9E3700E2EAE6 /* AppDelegate.m in Sources */,
 				DCC6EB74182D9E3700E2EAE6 /* main.m in Sources */,
+				DC2DB8971831897800959260 /* KeyCodeConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

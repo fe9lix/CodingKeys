@@ -2,6 +2,7 @@
 #import "AppService.h"
 #import "HotKeyService.h"
 #import "HotKey.h"
+#import <Carbon/Carbon.h>
 
 @interface AppDelegate ()
 
