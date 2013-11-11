@@ -19,8 +19,7 @@
 - (void)awakeFromNib {
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     self.statusItem.menu = self.statusMenu;
-    self.statusItem.title = @"CodingKeys";
-    //self.statusItem.image = [NSImage imageNamed:@"imageName"];
+    self.statusItem.image = [NSImage imageNamed:@"status_bar_icon"];
     self.statusItem.highlightMode = YES;
 }
 
