@@ -2,12 +2,14 @@
 #import "AppService.h"
 #import "HotKeyService.h"
 #import "HotKey.h"
+#import "LaunchService.h"
 #import <Carbon/Carbon.h>
 
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSMenu *statusMenu;
 @property (strong) NSStatusItem *statusItem;
+@property (weak) IBOutlet NSMenuItem *launchAtStartupMenuItem;
 
 @end
 
@@ -31,6 +33,9 @@
     self.statusItem.menu = self.statusMenu;
     self.statusItem.image = [NSImage imageNamed:@"status_bar_icon"];
     self.statusItem.highlightMode = YES;
+    
+    BOOL isLaunchedAtStartup = [[LaunchService sharedService] isLaunchedAtStartup];
+    self.launchAtStartupMenuItem.state = isLaunchedAtStartup ? NSOnState : NSOffState;
 }
 
 - (void)setupNotifications {
@@ -90,18 +95,25 @@
         return;
     }
     
-    [[HotKeyService sharedService] dispatchKeyEventForHotKeys:mappedHotKeys];
+    [[HotKeyService sharedService] dispatchKeyEventsForHotKeys:mappedHotKeys];
 }
 
 - (void)didChangeHotKeys:(NSNotification *)notification {
     [self registerHotKeys];
 }
 
-- (IBAction)settingsClicked:(id)sender {
+- (IBAction)toggleLaunchAtStartup:(id)sender {
+    BOOL enabled = (self.launchAtStartupMenuItem.state == NSOnState);
+    self.launchAtStartupMenuItem.state = enabled ? NSOffState : NSOnState;
+    
+    [[LaunchService sharedService] launchAtStartup:!enabled];
+}
+
+- (IBAction)keyMappingsClicked:(id)sender {
     [[AppService sharedService] openKeyMappings];
 }
 
-- (IBAction)aboutClicked:(id)sender {
+- (IBAction)helpClicked:(id)sender {
     [[AppService sharedService] openAboutURL];
 }
 

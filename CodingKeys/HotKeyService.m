@@ -12,6 +12,8 @@ NSString * const HotKeyHandlerDidTriggerHotKey = @"HotKeyHandlerDidTriggerHotKey
 
 @implementation HotKeyService
 
+static id this;
+
 + (HotKeyService *)sharedService {
     static HotKeyService *sharedService = nil;
     static dispatch_once_t onceToken;
@@ -20,8 +22,6 @@ NSString * const HotKeyHandlerDidTriggerHotKey = @"HotKeyHandlerDidTriggerHotKey
     });
     return sharedService;
 }
-
-static id this;
 
 - (id)init {
     self = [super init];
@@ -127,7 +127,7 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler,
     [self.hotKeys removeObjectForKey:@(hotKey.keyID)];
 }
 
-- (void)dispatchKeyEventForHotKeys:(NSArray *)hotKeys {
+- (void)dispatchKeyEventsForHotKeys:(NSArray *)hotKeys {
     ProcessSerialNumber processSerialNumber;
     GetFrontProcess(&processSerialNumber);
     

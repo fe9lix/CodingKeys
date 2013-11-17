@@ -649,22 +649,29 @@
         </menu>
         <customObject id="494" customClass="AppDelegate">
             <connections>
+                <outlet property="launchAtStartupMenuItem" destination="ESO-HV-kxk" id="NMa-sB-KPt"/>
                 <outlet property="statusMenu" destination="D8k-fY-3xb" id="v9R-ED-lJu"/>
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
         <menu id="D8k-fY-3xb">
             <items>
-                <menuItem title="Settings" id="ESO-HV-kxk">
+                <menuItem title="Launch At Startup" id="ESO-HV-kxk">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="settingsClicked:" target="494" id="bo6-qe-MNV"/>
+                        <action selector="toggleLaunchAtStartup:" target="494" id="2Lj-k0-3dG"/>
                     </connections>
                 </menuItem>
-                <menuItem title="About" id="VPU-As-2B4">
+                <menuItem title="Key Mappings" id="k4D-d4-Keo">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="aboutClicked:" target="494" id="d36-jP-3Q4"/>
+                        <action selector="keyMappingsClicked:" target="494" id="8je-9T-3h3"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Help" id="VPU-As-2B4">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="helpClicked:" target="494" id="p7c-is-6bn"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="7o7-NU-lWt"/>

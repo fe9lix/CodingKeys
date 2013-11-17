@@ -4,7 +4,7 @@ NSString * const AppServiceDidChangeHotKeys;
 
 @interface AppService : NSObject
 
-+ (AppService *)sharedService;
++ (instancetype)sharedService;
 
 - (BOOL)isAppRegistered:(NSString *)appName;
 - (NSArray *)hotKeysForAppWithName:(NSString *)appName;
