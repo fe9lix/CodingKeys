@@ -26,7 +26,7 @@
     "key": "⌘ D",
     "mapping": 
     {
-      "Xcode": "⌃ A|⇧ ↓|⌘ C|⌘ V|⌘ V",
+      "Xcode": "⌃ A | ⇧ ↓ | ⌘ C | ⌘ V | ⌘ V",
       "Sublime Text": "⇧ ⌘ D",
       "Eclipse": "⌥ ⌘ ↓",
       "Android Studio": "⌘ D"
@@ -37,10 +37,43 @@
     "key": "⌘ ⌫",
     "mapping": 
     {
-      "Xcode": "⌃ A|⌃ K|⌃ K",
+      "Xcode": "⌃ A | ⌃ K | ⌃ K",
       "Sublime Text": "⌃ ⇧ K",
       "Eclipse": "⌘ D",
       "Android Studio": "⌘ ⌫"
+    }
+  },
+  {
+    "command": "Format",
+    "key": "⇧ ⌘ F",
+    "mapping": 
+    {
+      "Xcode": "⌃ I",
+      "Sublime Text": "⌃ ⇧ R",
+      "Eclipse": "⇧ ⌘ F",
+      "Android Studio": "⌥ ⌘ L"
+    }
+  },
+  {
+    "command": "Rename",
+    "key": "⌃ ⌘ R",
+    "mapping": 
+    {
+      "Xcode": "⌃ ⌥ R",
+      "Sublime Text": "⌃ ⌘ G",
+      "Eclipse": "⌥ ⌘ R",
+      "Android Studio": "⇧ F6"
+    }
+  },
+  {
+    "command": "Find/Replace",
+    "key": "⌥ ⌘ F",
+    "mapping": 
+    {
+      "Xcode": "⌥ ⌘ F",
+      "Sublime Text": "⌥ ⌘ F",
+      "Eclipse": "⌘ F",
+      "Android Studio": "⌘ R"
     }
   }
 ]

@@ -76,7 +76,10 @@
     NSMutableArray *mappedKeys = [NSMutableArray array];
     
     for (NSString *mappingComponent in mappingComponents) {
-        HotKey *hotKey = [[HotKey alloc] initWithKey:mappingComponent
+        NSString *trimmedComponent = [mappingComponent stringByTrimmingCharactersInSet:
+                                      [NSCharacterSet whitespaceCharacterSet]];
+        
+        HotKey *hotKey = [[HotKey alloc] initWithKey:trimmedComponent
                                              mapping:nil];
         [mappedKeys addObject:hotKey];
     }
