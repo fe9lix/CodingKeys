@@ -3,7 +3,7 @@
 
 @implementation KeyCodeConverter
 
-+ (int)toKeyCode:(NSString *)character {
++ (CGKeyCode)toKeyCode:(NSString *)character {
     return keyCodeForChar([[character lowercaseString] characterAtIndex:0]);
 }
 
@@ -66,7 +66,8 @@
     return keyCodeMap;
 }
 
-// Uses code from: http://stackoverflow.com/questions/1918841/how-to-convert-ascii-character-to-cgkeycode
+// Uses code from:
+// http://stackoverflow.com/questions/1918841/how-to-convert-ascii-character-to-cgkeycode
 
 static CGKeyCode keyCodeForChar(const char c) {
     static CFMutableDictionaryRef charToCodeDict = NULL;
@@ -80,7 +81,9 @@ static CGKeyCode keyCodeForChar(const char c) {
                                                    128,
                                                    &kCFCopyStringDictionaryKeyCallBacks,
                                                    NULL);
-        if (charToCodeDict == NULL) return UINT16_MAX;
+        if (charToCodeDict == NULL) {
+            return UINT16_MAX; 
+        }
         
         for (i = 0; i < 128; ++i) {
             CFStringRef string = createStringForKey((CGKeyCode)i);

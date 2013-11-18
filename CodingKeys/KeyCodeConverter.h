@@ -4,6 +4,6 @@
 
 + (NSDictionary *)fixKeys;
 
-+ (int)toKeyCode:(NSString *)character;
++ (CGKeyCode)toKeyCode:(NSString *)character;
 
 @end

@@ -52,6 +52,10 @@ static id this;
 }
 
 - (HotKey *)registerHotKey:(HotKey *)hotKey {
+    if (self.hotKeys[@(hotKey.keyID)]) {
+        return hotKey;
+    }
+    
     hotKey.keyID = (int)[self.hotKeys count] + 1;
     
     EventHotKeyID hotKeyID;
@@ -97,6 +101,7 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler,
         UInt32 keyID = hotKeyID.id;
         
         HotKey *hotKey = [this findHotKeyByID:keyID];
+        
         [this dispatchNotificationForHotKey:hotKey];
     }
     
@@ -112,11 +117,9 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler,
 }
 
 - (void)unregisterAllHotKeys {
-    @autoreleasepool {
-        NSDictionary *hotKeys = [self.hotKeys copy];
-        for (id keyID in hotKeys) {
-            [self unregisterHotKey:hotKeys[keyID]];
-        }
+    NSDictionary *hotKeys = [self.hotKeys copy];
+    for (id keyID in hotKeys) {
+        [self unregisterHotKey:hotKeys[keyID]];
     }
 }
 
