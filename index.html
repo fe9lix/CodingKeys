@@ -19,7 +19,7 @@
 
         <header>
           <h1>CodingKeys</h1>
-          <h2>Unified keyboard shortcuts for all of your development tools</h2>
+          <h2>Unified keyboard shortcuts for your development tools</h2>
         </header>
 
         <section id="downloads" class="clearfix">
@@ -48,7 +48,7 @@ Every tool, however, has different keyboard shortcuts. Since it is hard to remem
 there's a constant loss of productivity when switching tools. If you don't want to edit all shortcut
 sets in every tool, you can instead use CodingKeys as an "abstraction layer". </p>
 
-<p>CodingKeys lets you define global shortcuts, which are dynamically re-mapped to existing shortcuts of 
+<p>CodingKeys lets you define unified shortcuts, which are dynamically re-mapped to existing shortcuts of 
 other applications when you switch tools. All mappings can be conveniently edited in a single configuration 
 file. The config file also gives you a nice overview over all shortcuts and grows as you add new apps to 
 your coding toolbox.</p>
@@ -57,8 +57,8 @@ your coding toolbox.</p>
 <a name="how-it-works" class="anchor" href="#how-it-works"><span class="octicon octicon-link"></span></a>How it works</h3>
 
 <p>CodingKeys dynamically registers keyboard shortcuts when one of the defined applications is activated 
-(and unregisters the shortcuts when the application is deactivated). It then generates mapped keyboard 
-events based on global shortcuts defined in a configuration file and sends those events to the active 
+(and unregisters the shortcuts when the application is deactivated). It then generates keyboard 
+events based on the mappings defined in a configuration file and sends those events to the active 
 application. </p>
 
 <h3>
@@ -67,12 +67,15 @@ application. </p>
 <p>CodingKeys runs on OSX (tested on OSX 10.8). Download the <a href="https://github.com/fe9lix/CodingKeys/releases/latest">latest release</a>. </p>
 
 <p>Unzip the file and copy the .app file into your program folder. 
-When you start the app, an icon should appear in the status bar...</p>
+When you start the app, an icon should appear in the status bar.</p>
+
+<p><strong>Important Note</strong>: Please make a backup of your key file before you install an updated version.
+(The mapping file is currently contained in the application package.)</p>
 
 <h3>
 <a name="how-to-use-it" class="anchor" href="#how-to-use-it"><span class="octicon octicon-link"></span></a>How to use it</h3>
 
-<p>CodingKeys runs in the StatusBar (small keyboard icon with a "C" symbol) and currently has four menu 
+<p>CodingKeys runs in the status bar (small keyboard icon with a "C" symbol) and currently has four menu 
 options: <code>Launch At Startup</code>, <code>Key Mappings</code>, <code>Help</code> and <code>Quit</code>. All options except <code>Key Mappings</code>
 (see separate section) should be self-explanatory. </p>
 
@@ -84,7 +87,7 @@ Each mapping has the following fields: </p>
 
 <ul>
 <li>command: The name of the command</li>
-<li>key: The global shortcut for the command</li>
+<li>key: The shortcut for the command</li>
 <li>mapping: Each application and its corresponding shortcut</li>
 </ul><h4>
 <a name="command" class="anchor" href="#command"><span class="octicon octicon-link"></span></a>Command</h4>
@@ -94,7 +97,7 @@ Each mapping has the following fields: </p>
 <h4>
 <a name="key" class="anchor" href="#key"><span class="octicon octicon-link"></span></a>Key</h4>
 
-<p>The global shortcut, consisting of unicode symbols, separated by spaces. 
+<p>The unified shortcut, consisting of unicode symbols, separated by spaces. 
 You can add modifiers such as <code>⌃</code> (Control), <code>⌥</code> (Option), <code>⌘</code> (Command), <code>⇧</code> (Shift) and special keys,
 such as <code>↑</code> (Arrow Up) or <code>↓</code> (Arrow Down). The full list of available options is shown at the end of this 
 file. See the exisiting key file for some examples and combinations.</p>
@@ -112,7 +115,7 @@ mappings that should be registered.</p>
 <p>You can map a shortcut to a sequence of multiple keys. For example, in Xcode there is no default shortcut
 to duplicate a line. However, pressing a sequence of five different key combinations in succession 
 achieves the same effect. Each part of a sequence must be separated by a <code>|</code> (pipe). The sequence for the 
-<code>duplicate line command</code> in Xcode is: <code>⌃ A | ⇧ ↓ | ⌘ C | ⌘ V | ⌘ V</code></p>
+<code>duplicate line command</code> in Xcode is:<br><code>⌃ A | ⇧ ↓ | ⌘ C | ⌘ V | ⌘ V</code></p>
 
 <p>When CodingKeys sees pipes, it fires those key combinations one after the other. That way, you might also 
 want to add other shortcuts that trigger useful sequences (although I haven't found use cases beyond
@@ -122,7 +125,7 @@ Xcode yet...).</p>
 <a name="saving-changes" class="anchor" href="#saving-changes"><span class="octicon octicon-link"></span></a>Saving Changes</h4>
 
 <p>Whenever you save the file, the mappings are automatically reloaded and should immediately take effect.
-<strong>Important Note</strong>: Please make sure to use correct JSON syntax. The app currently handles errors poorly, 
+Please make sure to use correct JSON syntax. The app currently handles errors poorly, 
 so chances are the app won't start or crash if there are errors in this file. If something goes wrong, 
 make sure to copy your mappings and then re-install the app.</p>
 
@@ -136,20 +139,20 @@ shortcuts (for example, renaming has no default shortcut in Xcode).</p>
 <h4>
 <a name="share-your-mappings" class="anchor" href="#share-your-mappings"><span class="octicon octicon-link"></span></a>Share Your Mappings</h4>
 
-<p>If you add new commands or tools and want to share them, just open an issue (tag <code>key file</code>) and attach your 
-file or its contents.</p>
+<p>If you add new commands or tools and want to share them, just open an issue (tag <code>key file</code>) and paste your
+config.</p>
 
 <h3>
 <a name="bugs-and-features" class="anchor" href="#bugs-and-features"><span class="octicon octicon-link"></span></a>Bugs and Features</h3>
 
-<p>Working with key codes is somewhat tricky and non-trivial, so might discover some combinations or special 
+<p>Working with key codes is somewhat tricky and non-trivial, so you might discover some combinations or special 
 keys that don't work. Please open an issue and describe the problem or just fix the issue yourself :) and 
 send a pull request.</p>
 
 <h3>
 <a name="symbols" class="anchor" href="#symbols"><span class="octicon octicon-link"></span></a>Symbols</h3>
 
-<p><code>↩</code> Return<br><code>⇥</code> Tab<br><code>⎵</code> Space<br><code>⌫</code> Delete<br><code>⎋</code> Escape<br><code>⌘</code> Command<br><code>⇧</code> Shift<br><code>⇪</code> CapsLock<br><code>⌥</code> Option<br><code>⌃</code> Control<br><code>⇧</code> RightShift<br><code>⌥</code> RightOption<br><code>⌃</code> RightControl<br><code>🔊</code> VolumeUp<br><code>🔈</code> VolumeDown<br><code>🔇</code> Mute<br><code>F1</code><br><code>F2</code><br><code>F3</code><br><code>F4</code><br><code>F5</code><br><code>F6</code><br><code>F7</code><br><code>F8</code><br><code>F9</code><br><code>F10</code><br><code>F11</code><br><code>F12</code><br><code>F13</code><br><code>F14</code><br><code>F15</code><br><code>F16</code><br><code>F17</code><br><code>F18</code><br><code>F19</code><br><code>F20</code><br><code>⌦</code> ForwardDelete<br><code>↖</code> Home<br><code>↘</code> End<br><code>⇞</code> PageUp<br><code>⇟</code> PageDown<br><code>←</code> LeftArrow<br><code>→</code> RightArrow<br><code>↓</code> DownArrow<br><code>↑</code> UpArrow  </p>
+<p><code>↩</code> Return<br><code>⇥</code> Tab<br><code>⎵</code> Space<br><code>⌫</code> Delete<br><code>⎋</code> Escape<br><code>⌘</code> Command<br><code>⇧</code> Shift<br><code>⇪</code> CapsLock<br><code>⌥</code> Option<br><code>⌃</code> Control<br><code>⇧</code> RightShift<br><code>⌥</code> RightOption<br><code>⌃</code> RightControl<br><code>\Ud83d\Udd0a</code> VolumeUp<br><code>\Ud83d\Udd08</code> VolumeDown<br><code>\Ud83d\Udd07</code> Mute<br><code>F1</code><br><code>F2</code><br><code>F3</code><br><code>F4</code><br><code>F5</code><br><code>F6</code><br><code>F7</code><br><code>F8</code><br><code>F9</code><br><code>F10</code><br><code>F11</code><br><code>F12</code><br><code>F13</code><br><code>F14</code><br><code>F15</code><br><code>F16</code><br><code>F17</code><br><code>F18</code><br><code>F19</code><br><code>F20</code><br><code>⌦</code> ForwardDelete<br><code>↖</code> Home<br><code>↘</code> End<br><code>⇞</code> PageUp<br><code>⇟</code> PageDown<br><code>←</code> LeftArrow<br><code>→</code> RightArrow<br><code>↓</code> DownArrow<br><code>↑</code> UpArrow  </p>
         </section>
 
         <footer>
