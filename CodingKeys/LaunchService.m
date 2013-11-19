@@ -31,7 +31,7 @@
     LSSharedFileListRef listRef = LSSharedFileListCreate(NULL,
                                                          kLSSharedFileListSessionLoginItems,
                                                          NULL);
-    if (listRef == nil) {
+    if (!listRef) {
         return;
     }
     
@@ -52,7 +52,7 @@
         }
     }
     
-    if (itemRef != nil) {
+    if (itemRef) {
         CFRelease(itemRef);
     }
     
@@ -62,7 +62,7 @@
 - (BOOL)isLaunchedAtStartup {
     LSSharedFileListItemRef itemRef = [self findLoginItem];
     BOOL isInList = itemRef != nil;
-    if (itemRef != nil) {
+    if (itemRef) {
         CFRelease(itemRef);
     }
     
@@ -75,7 +75,7 @@
     LSSharedFileListRef listRef = LSSharedFileListCreate(NULL,
                                                          kLSSharedFileListSessionLoginItems,
                                                          NULL);
-    if (listRef == nil) {
+    if (!listRef) {
         return nil;
     }
     

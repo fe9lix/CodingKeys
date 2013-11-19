@@ -97,6 +97,9 @@
 }
 
 - (BOOL)isEqual:(id)object {
+    if (object == self) {
+        return YES;
+    }
     BOOL equal = NO;
     if ([object isKindOfClass:[HotKey class]]) {
         HotKey *hotKey = (HotKey *)object;

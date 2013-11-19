@@ -52,10 +52,6 @@ static id this;
 }
 
 - (HotKey *)registerHotKey:(HotKey *)hotKey {
-    if (self.hotKeys[@(hotKey.keyID)]) {
-        return hotKey;
-    }
-    
     hotKey.keyID = (int)[self.hotKeys count] + 1;
     
     EventHotKeyID hotKeyID;
@@ -88,22 +84,20 @@ static id this;
 static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler,
                               EventRef theEvent,
                               void *userData) {
-    @autoreleasepool {
-        EventHotKeyID hotKeyID;
-        GetEventParameter(theEvent,
-                          kEventParamDirectObject,
-                          typeEventHotKeyID,
-                          NULL,
-                          sizeof(hotKeyID),
-                          NULL,
-                          &hotKeyID);
-        
-        UInt32 keyID = hotKeyID.id;
-        
-        HotKey *hotKey = [this findHotKeyByID:keyID];
-        
-        [this dispatchNotificationForHotKey:hotKey];
-    }
+    EventHotKeyID hotKeyID;
+    GetEventParameter(theEvent,
+                      kEventParamDirectObject,
+                      typeEventHotKeyID,
+                      NULL,
+                      sizeof(hotKeyID),
+                      NULL,
+                      &hotKeyID);
+    
+    UInt32 keyID = hotKeyID.id;
+    
+    HotKey *hotKey = [this findHotKeyByID:keyID];
+    
+    [this dispatchNotificationForHotKey:hotKey];
     
     return noErr;
 }
