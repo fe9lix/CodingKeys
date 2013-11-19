@@ -84,6 +84,7 @@ static id this;
 static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler,
                               EventRef theEvent,
                               void *userData) {
+
     EventHotKeyID hotKeyID;
     GetEventParameter(theEvent,
                       kEventParamDirectObject,

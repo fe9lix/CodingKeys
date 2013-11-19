@@ -66,14 +66,36 @@
     }
   },
   {
-    "command": "Find/Replace",
-    "key": "⌥ ⌘ F",
+    "command": "Toggle Comment",
+    "key": "⌘ ⇧ 7",
     "mapping": 
     {
-      "Xcode": "⌥ ⌘ F",
-      "Sublime Text": "⌥ ⌘ F",
-      "Eclipse": "⌘ F",
-      "Android Studio": "⌘ R"
+      "Xcode": "⌘ /",
+      "Sublime Text": "⌘ /",
+      "Eclipse": "⌘ 7",
+      "Android Studio": "⌘ /"
+    }
+  },
+  {
+    "command": "Quick Open",
+    "key": "⇧ ⌘ O",
+    "mapping": 
+    {
+      "Xcode": "⇧ ⌘ O",
+      "Sublime Text": "⌘ P",
+      "Eclipse": "⇧ ⌘ T",
+      "Android Studio": "⌘ O"
+    }
+  },
+  {
+    "command": "Run",
+    "key": "⌘ R",
+    "mapping": 
+    {
+      "Xcode": "⌘ R",
+      "Sublime Text": "⌘ B",
+      "Eclipse": "⇧ ⌘ F11",
+      "Android Studio": "⌃ R"
     }
   }
-]
+] 

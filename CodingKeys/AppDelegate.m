@@ -32,6 +32,7 @@
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     self.statusItem.menu = self.statusMenu;
     self.statusItem.image = [NSImage imageNamed:@"status_bar_icon"];
+    self.statusItem.alternateImage = [NSImage imageNamed:@"status_bar_icon_alternate"];
     self.statusItem.highlightMode = YES;
     
     BOOL isLaunchedAtStartup = [[LaunchService sharedService] isLaunchedAtStartup];

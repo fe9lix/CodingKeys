@@ -67,7 +67,7 @@
     }
     
     self.modifiers = modifiers;
-    self.carbonModifiers = carbonModifiers;
+        self.carbonModifiers = carbonModifiers;
 }
 
 - (NSArray *)mappedHotKeysForAppWithName:(NSString *)appName {
