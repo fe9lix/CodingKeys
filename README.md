@@ -1,16 +1,20 @@
 CodingKeys
 ==========
 
+![CodingKeys](Resources/screenshots/codingkeys-statusbar.png)
+
+![CodingKeys](Resources/screenshots/codingkeys-menu.png)
+
 ### What problem does it solve?
 
 Nowadays, developers often work in several different development environments and text editors. 
 For example, you may need Eclipse for regular Java development, Android Studio for Android development, 
-Xcode for iOS development, Visual Studio for C#, Sublime Text for web development, etc.
+Xcode for iOS development, Visual Studio for C#, Sublime Text for web development, etc..
 Every tool, however, has different keyboard shortcuts. Since it is hard to remember all shortcuts, 
 there's a constant loss of productivity when switching tools. If you don't want to edit all shortcut
 sets in every tool, you can instead use CodingKeys as an "abstraction layer". 
 
-CodingKeys lets you define global shortcuts, which are dynamically remapped to existing shortcuts of 
+CodingKeys lets you define global shortcuts, which are dynamically re-mapped to existing shortcuts of 
 other applications when you switch tools. All mappings can be conveniently edited in a single configuration 
 file. The config file also gives you a nice overview over all shortcuts and grows as you add new apps to 
 your coding toolbox.
@@ -33,8 +37,8 @@ options: `Launch At Startup`, `Key Mappings`, `Help` and `Quit`. All options exc
 
 ### Editing Key Mappings
 
-Selecting `Key Mappings` from the menu opens a configuration JSON file. Each mapping has the 
-following fields: 
+Selecting `Key Mappings` from the menu opens the configuration JSON file in your default text editor. 
+Each mapping has the following fields: 
 
 - command: The name of the command
 - key: The global shortcut for the command
@@ -61,10 +65,10 @@ achieves the same effect. Each part of a sequence must be separated by a `|` (pi
 `duplicate line command` in Xcode is: `⌃ A | ⇧ ↓ | ⌘ C | ⌘ V | ⌘ V`
 
 When CodingKeys sees pipes, it fires those key combinations one after the other. That way, you might also 
-want to add other shortcuts that trigger useful shortcut sequences (although I haven't found use cases beyond
+want to add other shortcuts that trigger useful sequences (although I haven't found use cases beyond
 Xcode yet...).
 
-#### Saving config changes
+#### Saving Changes
 Whenever you save the file, the mappings are automatically reloaded and should immediately take effect.
 **Important Note**: Please make sure to use correct JSON syntax. The app currently handles errors poorly, 
 so chances are the app won't start or crash if there are errors in this file. If something goes wrong, 
@@ -72,14 +76,14 @@ make sure to copy your mappings and then re-install the app.
 
 #### Default Mappings
 The default key file contains mappings for some commands of Eclipse, Android Studio, Xcode and Sublime Text. 
-You might need to change some of the mapping for Xcode (Move Line Up, Move Line Down) or add non-existing
+You might need to change some of the mappings for Xcode (Move Line Up, Move Line Down) or add non-existing
 shortcuts (for example, renaming has no default shortcut in Xcode).
 
-#### Share your mappings
+#### Share Your Mappings
 If you add new commands or tools and want to share them, just open an issue (tag `key file`) and attach your 
 file or its contents.
 
-### Bugs and features
+### Bugs and Features
 Working with key codes is somewhat tricky and non-trivial, so might discover some combinations or special 
 keys that don't work. Please open an issue and describe the problem or just fix the issue yourself :) and 
 send a pull request.
