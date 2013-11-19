@@ -30,11 +30,14 @@ application.
 CodingKeys runs on OSX (tested on OSX 10.8). Download the [latest release](https://github.com/fe9lix/CodingKeys/releases/latest). 
 
 Unzip the file and copy the .app file into your program folder. 
-When you start the app, an icon should appear in the status bar...
+When you start the app, an icon should appear in the status bar.
+
+**Important Note**: Please make a backup of your mappings before you install an updated version.
+(The mapping file is currently contained in the application package.)
 
 ### How to use it
 
-CodingKeys runs in the StatusBar (small keyboard icon with a "C" symbol) and currently has four menu 
+CodingKeys runs in the status bar (small keyboard icon with a "C" symbol) and currently has four menu 
 options: `Launch At Startup`, `Key Mappings`, `Help` and `Quit`. All options except `Key Mappings`
 (see separate section) should be self-explanatory. 
 
@@ -65,7 +68,8 @@ mappings that should be registered.
 You can map a shortcut to a sequence of multiple keys. For example, in Xcode there is no default shortcut
 to duplicate a line. However, pressing a sequence of five different key combinations in succession 
 achieves the same effect. Each part of a sequence must be separated by a `|` (pipe). The sequence for the 
-`duplicate line command` in Xcode is: `⌃ A | ⇧ ↓ | ⌘ C | ⌘ V | ⌘ V`
+`duplicate line command` in Xcode is:  
+`⌃ A | ⇧ ↓ | ⌘ C | ⌘ V | ⌘ V`
 
 When CodingKeys sees pipes, it fires those key combinations one after the other. That way, you might also 
 want to add other shortcuts that trigger useful sequences (although I haven't found use cases beyond
@@ -105,9 +109,9 @@ send a pull request.
 `⇧` RightShift  
 `⌥` RightOption  
 `⌃` RightControl  
-`🔊` VolumeUp  
-`🔈` VolumeDown  
-`🔇` Mute  
+`\Ud83d\Udd0a�` VolumeUp  
+`\Ud83d\Udd08�` VolumeDown  
+`\Ud83d\Udd07�` Mute  
 `F1`  
 `F2`  
 `F3`  
