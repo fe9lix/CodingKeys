@@ -27,7 +27,10 @@ events based on global shortcuts defined in a configuration file and sends those
 application. 
 
 ### Installation
-CodingKeys runs on OSX (tested on OSX 10.8). 
+CodingKeys runs on OSX (tested on OSX 10.8). Download the [latest release](https://github.com/fe9lix/CodingKeys/releases/latest). 
+
+Unzip the file and copy the .app file into your program folder. 
+When you start the app, an icon should appear in the status bar...
 
 ### How to use it
 
