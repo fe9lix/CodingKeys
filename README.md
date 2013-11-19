@@ -11,8 +11,9 @@ there's a constant loss of productivity when switching tools. If you don't want 
 sets in every tool, you can instead use CodingKeys as an "abstraction layer". 
 
 CodingKeys lets you define global shortcuts, which are dynamically remapped to existing shortcuts of 
-other applications. All mappings can be conveniently edited in a single configuration file. The config 
-file also gives you a nice overview over all shortcuts and grows as you add new apps to your coding toolbox.
+other applications when you switch tools. All mappings can be conveniently edited in a single configuration 
+file. The config file also gives you a nice overview over all shortcuts and grows as you add new apps to 
+your coding toolbox.
 
 ### How it works
 
@@ -22,52 +23,68 @@ events based on global shortcuts defined in a configuration file and sends those
 application. 
 
 ### Installation
-tbd
+CodingKeys runs on OSX (tested on OSX 10.8). 
 
 ### How to use it
 
 CodingKeys runs in the StatusBar (small keyboard icon with a "C" symbol) and currently has four menu 
-options: `Launch At Startup`, `Keyboard Mappings`, `Help` and `Quit`. All options except `Keyboard Mappings`
+options: `Launch At Startup`, `Key Mappings`, `Help` and `Quit`. All options except `Key Mappings`
 (see separate section) should be self-explanatory. 
 
-### Editing Keyboard Mappings
+### Editing Key Mappings
 
-Selecting `Keyboard Mappings` from the menu opens a configuration JSON file. Each mapping has the 
+Selecting `Key Mappings` from the menu opens a configuration JSON file. Each mapping has the 
 following fields: 
 
 - command: The name of the command
 - key: The global shortcut for the command
-- mapping: Lists each application and the corresponding shortcut
+- mapping: Each application and its corresponding shortcut
 
 #### Command
 This name is just for your own information.
 
 #### Key
 The global shortcut, consisting of unicode symbols, separated by spaces. 
-You can use symbols such as `⌃` (Control), `⌥` (Option), `⌘` (Command), `⇧` (Shift), `↑` (Arrow Up), 
-`↓` (Arrow Down). The full list of available options is shown at the end of this file.
+You can add modifiers such as `⌃` (Control), `⌥` (Option), `⌘` (Command), `⇧` (Shift) and special keys,
+such as `↑` (Arrow Up) or `↓` (Arrow Down). The full list of available options is shown at the end of this 
+file. See the exisiting key file for some examples and combinations.
 
 #### Mapping
 The mapping part lists each application you want to support and the corresponding shortcuts. Use the name 
 displayed in the title bar of the application. This name is used to find the active application and the 
-mappings that must be applied.
+mappings that should be registered.
 
 #### Shortcut Sequences
-You can map a shortcut to a sequence of multiple keys. For example, in Xcode there are no default shortcut
+You can map a shortcut to a sequence of multiple keys. For example, in Xcode there is no default shortcut
 to duplicate a line. However, pressing a sequence of five different key combinations in succession 
 achieves the same effect. Each part of a sequence must be separated by a `|` (pipe). The sequence for the 
-duplicate line command in Xcode is: `⌃ A | ⇧ ↓ | ⌘ C | ⌘ V | ⌘ V`
+`duplicate line command` in Xcode is: `⌃ A | ⇧ ↓ | ⌘ C | ⌘ V | ⌘ V`
 
-When CodingKeys sees a pipe, it fires those key combinations one after the other.
+When CodingKeys sees pipes, it fires those key combinations one after the other. That way, you might also 
+want to add other shortcuts that trigger useful shortcut sequences (although I haven't found use cases beyond
+Xcode yet...).
 
 #### Saving config changes
 Whenever you save the file, the mappings are automatically reloaded and should immediately take effect.
 **Important Note**: Please make sure to use correct JSON syntax. The app currently handles errors poorly, 
 so chances are the app won't start or crash if there are errors in this file. If something goes wrong, 
-make sure to copy your mappings and the re-install the app.
+make sure to copy your mappings and then re-install the app.
+
+#### Default Mappings
+The default key file contains mappings for some commands of Eclipse, Android Studio, Xcode and Sublime Text. 
+You might need to change some of the mapping for Xcode (Move Line Up, Move Line Down) or add non-existing
+shortcuts (for example, renaming has no default shortcut in Xcode).
+
+#### Share your mappings
+If you add new commands or tools and want to share them, just open an issue (tag `key file`) and attach your 
+file or its contents.
+
+### Bugs and features
+Working with key codes is somewhat tricky and non-trivial, so might discover some combinations or special 
+keys that don't work. Please open an issue and describe the problem or just fix the issue yourself :) and 
+send a pull request.
 
 ### Symbols
-
 `↩` Return  
 `⇥` Tab  
 `⎵` Space  
