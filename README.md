@@ -14,7 +14,7 @@ Every tool, however, has different keyboard shortcuts. Since it is hard to remem
 there's a constant loss of productivity when switching tools. If you don't want to edit all shortcut
 sets in every tool, you can instead use CodingKeys as an "abstraction layer". 
 
-CodingKeys lets you define global shortcuts, which are dynamically re-mapped to existing shortcuts of 
+CodingKeys lets you define unified shortcuts, which are dynamically re-mapped to existing shortcuts of 
 other applications when you switch tools. All mappings can be conveniently edited in a single configuration 
 file. The config file also gives you a nice overview over all shortcuts and grows as you add new apps to 
 your coding toolbox.
@@ -22,8 +22,8 @@ your coding toolbox.
 ### How it works
 
 CodingKeys dynamically registers keyboard shortcuts when one of the defined applications is activated 
-(and unregisters the shortcuts when the application is deactivated). It then generates mapped keyboard 
-events based on global shortcuts defined in a configuration file and sends those events to the active 
+(and unregisters the shortcuts when the application is deactivated). It then generates keyboard 
+events based on the mappings defined in a configuration file and sends those events to the active 
 application. 
 
 ### Installation
@@ -32,7 +32,7 @@ CodingKeys runs on OSX (tested on OSX 10.8). Download the [latest release](https
 Unzip the file and copy the .app file into your program folder. 
 When you start the app, an icon should appear in the status bar.
 
-**Important Note**: Please make a backup of your mappings before you install an updated version.
+**Important Note**: Please make a backup of your key file before you install an updated version.
 (The mapping file is currently contained in the application package.)
 
 ### How to use it
@@ -47,14 +47,14 @@ Selecting `Key Mappings` from the menu opens the configuration JSON file in your
 Each mapping has the following fields: 
 
 - command: The name of the command
-- key: The global shortcut for the command
+- key: The shortcut for the command
 - mapping: Each application and its corresponding shortcut
 
 #### Command
 This name is just for your own information.
 
 #### Key
-The global shortcut, consisting of unicode symbols, separated by spaces. 
+The unified shortcut, consisting of unicode symbols, separated by spaces. 
 You can add modifiers such as `⌃` (Control), `⌥` (Option), `⌘` (Command), `⇧` (Shift) and special keys,
 such as `↑` (Arrow Up) or `↓` (Arrow Down). The full list of available options is shown at the end of this 
 file. See the exisiting key file for some examples and combinations.
@@ -77,7 +77,7 @@ Xcode yet...).
 
 #### Saving Changes
 Whenever you save the file, the mappings are automatically reloaded and should immediately take effect.
-**Important Note**: Please make sure to use correct JSON syntax. The app currently handles errors poorly, 
+Please make sure to use correct JSON syntax. The app currently handles errors poorly, 
 so chances are the app won't start or crash if there are errors in this file. If something goes wrong, 
 make sure to copy your mappings and then re-install the app.
 
@@ -87,11 +87,11 @@ You might need to change some of the mappings for Xcode (Move Line Up, Move Line
 shortcuts (for example, renaming has no default shortcut in Xcode).
 
 #### Share Your Mappings
-If you add new commands or tools and want to share them, just open an issue (tag `key file`) and attach your 
-file or its contents.
+If you add new commands or tools and want to share them, just open an issue (tag `key file`) and paste your
+config.
 
 ### Bugs and Features
-Working with key codes is somewhat tricky and non-trivial, so might discover some combinations or special 
+Working with key codes is somewhat tricky and non-trivial, so you might discover some combinations or special 
 keys that don't work. Please open an issue and describe the problem or just fix the issue yourself :) and 
 send a pull request.
 
@@ -109,9 +109,9 @@ send a pull request.
 `⇧` RightShift  
 `⌥` RightOption  
 `⌃` RightControl  
-`\Ud83d\Udd0a�` VolumeUp  
-`\Ud83d\Udd08�` VolumeDown  
-`\Ud83d\Udd07�` Mute  
+`\Ud83d\Udd0a` VolumeUp  
+`\Ud83d\Udd08` VolumeDown  
+`\Ud83d\Udd07` Mute  
 `F1`  
 `F2`  
 `F3`  
