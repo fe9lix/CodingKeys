@@ -1,9 +1,9 @@
 CodingKeys
 ==========
 
-![CodingKeys](Resources/screenshots/codingkeys-statusbar.png)
+![CodingKeys](https://github.com/fe9lix/CodingKeys/blob/gh-pages/images/codingkeys-statusbar.png?raw=true)
 
-![CodingKeys](Resources/screenshots/codingkeys-menu.png)
+![CodingKeys](https://github.com/fe9lix/CodingKeys/blob/gh-pages/images/codingkeys-menu.png?raw=true)
 
 ### What problem does it solve?
 
