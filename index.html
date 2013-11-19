@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>CodingKeys by fe9lix</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>CodingKeys</h1>
+          <h2>An abstraction layer for keyboard shortcuts</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/fe9lix/CodingKeys/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/fe9lix/CodingKeys/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/fe9lix/CodingKeys" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a name="codingkeys" class="anchor" href="#codingkeys"><span class="octicon octicon-link"></span></a>CodingKeys</h1>
+
+<p><img src="Resources/screenshots/codingkeys-statusbar.png" alt="CodingKeys"></p>
+
+<p><img src="Resources/screenshots/codingkeys-menu.png" alt="CodingKeys"></p>
+
+<h3>
+<a name="what-problem-does-it-solve" class="anchor" href="#what-problem-does-it-solve"><span class="octicon octicon-link"></span></a>What problem does it solve?</h3>
+
+<p>Nowadays, developers often work in several different development environments and text editors. 
+For example, you may need Eclipse for regular Java development, Android Studio for Android development, 
+Xcode for iOS development, Visual Studio for C#, Sublime Text for web development, etc..
+Every tool, however, has different keyboard shortcuts. Since it is hard to remember all shortcuts, 
+there's a constant loss of productivity when switching tools. If you don't want to edit all shortcut
+sets in every tool, you can instead use CodingKeys as an "abstraction layer". </p>
+
+<p>CodingKeys lets you define global shortcuts, which are dynamically re-mapped to existing shortcuts of 
+other applications when you switch tools. All mappings can be conveniently edited in a single configuration 
+file. The config file also gives you a nice overview over all shortcuts and grows as you add new apps to 
+your coding toolbox.</p>
+
+<h3>
+<a name="how-it-works" class="anchor" href="#how-it-works"><span class="octicon octicon-link"></span></a>How it works</h3>
+
+<p>CodingKeys dynamically registers keyboard shortcuts when one of the defined applications is activated 
+(and unregisters the shortcuts when the application is deactivated). It then generates mapped keyboard 
+events based on global shortcuts defined in a configuration file and sends those events to the active 
+application. </p>
+
+<h3>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>CodingKeys runs on OSX (tested on OSX 10.8). </p>
+
+<h3>
+<a name="how-to-use-it" class="anchor" href="#how-to-use-it"><span class="octicon octicon-link"></span></a>How to use it</h3>
+
+<p>CodingKeys runs in the StatusBar (small keyboard icon with a "C" symbol) and currently has four menu 
+options: <code>Launch At Startup</code>, <code>Key Mappings</code>, <code>Help</code> and <code>Quit</code>. All options except <code>Key Mappings</code>
+(see separate section) should be self-explanatory. </p>
+
+<h3>
+<a name="editing-key-mappings" class="anchor" href="#editing-key-mappings"><span class="octicon octicon-link"></span></a>Editing Key Mappings</h3>
+
+<p>Selecting <code>Key Mappings</code> from the menu opens the configuration JSON file in your default text editor. 
+Each mapping has the following fields: </p>
+
+<ul>
+<li>command: The name of the command</li>
+<li>key: The global shortcut for the command</li>
+<li>mapping: Each application and its corresponding shortcut</li>
+</ul><h4>
+<a name="command" class="anchor" href="#command"><span class="octicon octicon-link"></span></a>Command</h4>
+
+<p>This name is just for your own information.</p>
+
+<h4>
+<a name="key" class="anchor" href="#key"><span class="octicon octicon-link"></span></a>Key</h4>
+
+<p>The global shortcut, consisting of unicode symbols, separated by spaces. 
+You can add modifiers such as <code>⌃</code> (Control), <code>⌥</code> (Option), <code>⌘</code> (Command), <code>⇧</code> (Shift) and special keys,
+such as <code>↑</code> (Arrow Up) or <code>↓</code> (Arrow Down). The full list of available options is shown at the end of this 
+file. See the exisiting key file for some examples and combinations.</p>
+
+<h4>
+<a name="mapping" class="anchor" href="#mapping"><span class="octicon octicon-link"></span></a>Mapping</h4>
+
+<p>The mapping part lists each application you want to support and the corresponding shortcuts. Use the name 
+displayed in the title bar of the application. This name is used to find the active application and the 
+mappings that should be registered.</p>
+
+<h4>
+<a name="shortcut-sequences" class="anchor" href="#shortcut-sequences"><span class="octicon octicon-link"></span></a>Shortcut Sequences</h4>
+
+<p>You can map a shortcut to a sequence of multiple keys. For example, in Xcode there is no default shortcut
+to duplicate a line. However, pressing a sequence of five different key combinations in succession 
+achieves the same effect. Each part of a sequence must be separated by a <code>|</code> (pipe). The sequence for the 
+<code>duplicate line command</code> in Xcode is: <code>⌃ A | ⇧ ↓ | ⌘ C | ⌘ V | ⌘ V</code></p>
+
+<p>When CodingKeys sees pipes, it fires those key combinations one after the other. That way, you might also 
+want to add other shortcuts that trigger useful sequences (although I haven't found use cases beyond
+Xcode yet...).</p>
+
+<h4>
+<a name="saving-changes" class="anchor" href="#saving-changes"><span class="octicon octicon-link"></span></a>Saving Changes</h4>
+
+<p>Whenever you save the file, the mappings are automatically reloaded and should immediately take effect.
+<strong>Important Note</strong>: Please make sure to use correct JSON syntax. The app currently handles errors poorly, 
+so chances are the app won't start or crash if there are errors in this file. If something goes wrong, 
+make sure to copy your mappings and then re-install the app.</p>
+
+<h4>
+<a name="default-mappings" class="anchor" href="#default-mappings"><span class="octicon octicon-link"></span></a>Default Mappings</h4>
+
+<p>The default key file contains mappings for some commands of Eclipse, Android Studio, Xcode and Sublime Text. 
+You might need to change some of the mappings for Xcode (Move Line Up, Move Line Down) or add non-existing
+shortcuts (for example, renaming has no default shortcut in Xcode).</p>
+
+<h4>
+<a name="share-your-mappings" class="anchor" href="#share-your-mappings"><span class="octicon octicon-link"></span></a>Share Your Mappings</h4>
+
+<p>If you add new commands or tools and want to share them, just open an issue (tag <code>key file</code>) and attach your 
+file or its contents.</p>
+
+<h3>
+<a name="bugs-and-features" class="anchor" href="#bugs-and-features"><span class="octicon octicon-link"></span></a>Bugs and Features</h3>
+
+<p>Working with key codes is somewhat tricky and non-trivial, so might discover some combinations or special 
+keys that don't work. Please open an issue and describe the problem or just fix the issue yourself :) and 
+send a pull request.</p>
+
+<h3>
+<a name="symbols" class="anchor" href="#symbols"><span class="octicon octicon-link"></span></a>Symbols</h3>
+
+<p><code>↩</code> Return<br><code>⇥</code> Tab<br><code>⎵</code> Space<br><code>⌫</code> Delete<br><code>⎋</code> Escape<br><code>⌘</code> Command<br><code>⇧</code> Shift<br><code>⇪</code> CapsLock<br><code>⌥</code> Option<br><code>⌃</code> Control<br><code>⇧</code> RightShift<br><code>⌥</code> RightOption<br><code>⌃</code> RightControl<br><code>🔊</code> VolumeUp<br><code>🔈</code> VolumeDown<br><code>🔇</code> Mute<br><code>F1</code><br><code>F2</code><br><code>F3</code><br><code>F4</code><br><code>F5</code><br><code>F6</code><br><code>F7</code><br><code>F8</code><br><code>F9</code><br><code>F10</code><br><code>F11</code><br><code>F12</code><br><code>F13</code><br><code>F14</code><br><code>F15</code><br><code>F16</code><br><code>F17</code><br><code>F18</code><br><code>F19</code><br><code>F20</code><br><code>⌦</code> ForwardDelete<br><code>↖</code> Home<br><code>↘</code> End<br><code>⇞</code> PageUp<br><code>⇟</code> PageDown<br><code>←</code> LeftArrow<br><code>→</code> RightArrow<br><code>↓</code> DownArrow<br><code>↑</code> UpArrow  </p>
+        </section>
+
+        <footer>
+          CodingKeys is maintained by <a href="https://github.com/fe9lix">fe9lix</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
