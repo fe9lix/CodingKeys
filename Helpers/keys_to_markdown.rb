@@ -35,12 +35,14 @@ def make_table
     row = [
       "**#{key_mapping["command"]}**", 
       "**`#{key_mapping["key"]}`**"]
+
     mapping = key_mapping["mapping"]
+
     apps.each do |app|
-      mapped_key = mapping[app]
-      mapped_key.gsub!("|", "&#124;")
+      mapped_key = mapping[app].gsub("|", "&#124;")
       row << "#{mapped_key}" || " "
     end
+
     markdown_str += make_row(row)
   end
 
