@@ -86,6 +86,18 @@ The default key file contains mappings for some commands of Eclipse, Android Stu
 You might need to change some of the mappings for Xcode (Move Line Up, Move Line Down) or add non-existing
 shortcuts (for example, renaming has no default shortcut in Xcode).
 
+| Command | Key | Android Studio | Eclipse | Sublime Text | Xcode |
+| ----- | ----- | ----- | ----- | ----- | ----- |
+| **Move Line Up** | **`⌃ ⌥ ↑`** | ⇧ ⌥ ↑ | ⌥ ↑ | ⌃ ⌘ ↑ | ⌃ ⌥ ↑ |
+| **Move Line Down** | **`⌃ ⌥ ↓`** | ⇧ ⌥ ↓ | ⌥ ↓ | ⌃ ⌘ ↓ | ⌃ ⌥ ↓ |
+| **Duplicate Line** | **`⌘ D`** | ⌘ D | ⌥ ⌘ ↓ | ⇧ ⌘ D | ⌃ A &#124; ⇧ ↓ &#124; ⌘ C &#124; ⌘ V &#124; ⌘ V |
+| **Delete Line** | **`⌘ ⌫`** | ⌘ ⌫ | ⌘ D | ⌃ ⇧ K | ⌃ A &#124; ⌃ K &#124; ⌃ K |
+| **Format** | **`⇧ ⌘ F`** | ⌥ ⌘ L | ⇧ ⌘ F | ⌃ ⇧ R | ⌃ I |
+| **Rename** | **`⌃ ⌘ R`** | ⇧ F6 | ⌥ ⌘ R | ⌃ ⌘ G | ⌃ ⌥ R |
+| **Toggle Comment** | **`⌘ ⇧ 7`** | ⌘ / | ⌘ 7 | ⌘ / | ⌘ / |
+| **Quick Open** | **`⇧ ⌘ O`** | ⌘ O | ⇧ ⌘ T | ⌘ P | ⇧ ⌘ O |
+| **Run** | **`⌘ R`** | ⌃ R | ⇧ ⌘ F11 | ⌘ B | ⌘ R |
+
 #### Share Your Mappings
 If you add new commands or tools and want to share them, just open an issue (tag `key file`) and paste your
 config.
